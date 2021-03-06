@@ -20,7 +20,7 @@ subprojects {
 
     project.ext.majorVersion = '0'
     project.ext.minorVersion = '2'
-    project.ext.patchVersion = '0-SNAPSHOT'
+    project.ext.patchVersion = '1-SNAPSHOT'
     project.ext.apiVersion = project.ext.majorVersion + '.' + project.ext.minorVersion
     project.ext.fullVersion = project.ext.apiVersion + '.' + project.ext.patchVersion
 
