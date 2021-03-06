@@ -1,0 +1,21 @@
+repositories {
+    maven { url 'https://jitpack.io' }
+    maven { name 'spigot-repo'; url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+}
+
+dependencies {
+    api project(':common')
+
+    compileOnly 'org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT'
+    compileOnly('com.github.MilkBowl:VaultAPI:1.7') {
+        exclude(module: 'bukkit')
+    }
+
+    compileOnly 'org.jetbrains:annotations:20.1.0'
+
+    compileOnly 'org.projectlombok:lombok:1.18.18'
+    annotationProcessor 'org.projectlombok:lombok:1.18.18'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.18'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.18'
+}

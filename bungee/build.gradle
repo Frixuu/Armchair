@@ -1,0 +1,27 @@
+repositories {
+    maven { url 'https://jitpack.io' }
+    maven { name 'bungeecord-repo'; url 'https://oss.sonatype.org/content/repositories/snapshots' }
+}
+
+dependencies {
+    api project(':common')
+
+    compileOnly 'net.md-5:bungeecord-api:1.16-R0.5-SNAPSHOT'
+    testImplementation 'net.md-5:bungeecord-api:1.16-R0.5-SNAPSHOT'
+
+    compileOnly 'org.jetbrains:annotations:20.1.0'
+
+    compileOnly 'org.projectlombok:lombok:1.18.18'
+    annotationProcessor 'org.projectlombok:lombok:1.18.18'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.18'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.18'
+
+    testImplementation "org.spockframework:spock-core:2.0-M4-groovy-3.0"
+}
+
+test {
+    useJUnitPlatform {
+        excludeTags 'dependency_checksum'
+    }
+}

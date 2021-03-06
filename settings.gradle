@@ -1,0 +1,6 @@
+rootProject.name = 'armchair'
+include (
+        'common',
+        'bungee',
+        'spigot'
+)
